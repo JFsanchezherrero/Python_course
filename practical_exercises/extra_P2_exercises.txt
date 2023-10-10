@@ -1,0 +1,38 @@
+1. Create the Fibonnacci sequence (https://en.wikipedia.org/wiki/Fibonacci_sequence) using a while, print(x, end=" ") and multiple variable assignment
+########################
+Fibonacci sequence up to 100
+Expected ouput:
+0 1 1 2 3 5 8 13 21 34 55 89 
+########################
+
+2. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+########################
+Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+Expected Output : ['Green', 'White', 'Black']
+########################
+
+3. Write a Python program to print the numbers of a specified list after removing even numbers from it.
+
+
+4. Write a Python program to create a list by concatenating a given list of characters with a range from 1 to n.
+########################
+Sample list : ['p', 'q']
+n =5
+Sample Output : ['p1', 'q1', 'p2', 'q2', 'p3', 'q3', 'p4', 'q4', 'p5', 'q5']
+########################
+
+5. Write a Python program to generate lists of five consecutive numbers in a range from 1 to 100.
+
+6. Write a Python program to compute the difference between two lists.
+########################
+Sample data: ["red", "orange", "green", "blue", "white"], ["black", "yellow", "green", "blue"]
+Expected Output:
+Color1-Color2: ['white', 'orange', 'red']
+Color2-Color1: ['black', 'yellow']
+########################
+
+7. Write a Python program to replace the last element in a list with another list.
+########################
+Sample data : [1, 3, 5, 7, 9, 10], [2, 4, 6, 8]
+Expected Output: [1, 3, 5, 7, 9, 2, 4, 6, 8]
+########################
