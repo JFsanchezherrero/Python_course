@@ -34,9 +34,11 @@ chr1,266855,268655,+,ENSG00000286448,,lncRNA
 chr1,516376,516479,-,ENSG00000278757,U6,snRNA
 ```
 
+## Example python code
 
-### example.py
+Then, using these few lines, I can read file contents, remove trailing lines and retrieve the DNA sequence of a random example from the annotation data
 
+```{py}
 #!/usr/bin/env python3
 import sys
 import pandas as pd
@@ -63,4 +65,4 @@ start_pos = annot_df.loc[rnd_el,'start']
 stop_pos = annot_df.loc[rnd_el,'stop']
 
 print(fasta_seq[annot_df.loc[rnd_el,'start']:annot_df.loc[rnd_el,'stop']])
-
+```
