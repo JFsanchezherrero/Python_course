@@ -47,19 +47,20 @@ sort -n -k2 -t, > chr1_annot.csv
 ### Add header
 Then, I manually add a header to the csv file: `chr,start,stop,strand,ensembl_ID,gene_name,biotype`
 
-As an example:
-```
-chr,start,stop,strand,ensembl_ID,gene_name,biotype
-chr1,182696,184174,+,ENSG00000279928,DDX11L17,unprocessed_pseudogene
-chr1,185217,195411,-,ENSG00000279457,WASH9P,unprocessed_pseudogene
-chr1,187891,187958,-,ENSG00000273874,MIR6859-2,miRNA
-chr1,257864,359681,-,ENSG00000228463,,transcribed_processed_pseudogene
-chr1,266855,268655,+,ENSG00000286448,,lncRNA
-chr1,516376,516479,-,ENSG00000278757,U6,snRNA
-```
+## Example of data
+
+|chr|start|stop|strand|ensembl_ID|gene_name|biotype|
+|---|-----|----|------|----------|---------|-------|
+|chr1|182696|184174|+|ENSG00000279928|DDX11L17|unprocessed_pseudogene|
+|chr1|185217|195411|-|ENSG00000279457|WASH9P|unprocessed_pseudogene|
+|chr1|187891|187958|-|ENSG00000273874|MIR6859-2|miRNA|
+|chr1|257864|359681|-|ENSG00000228463||transcribed_processed_pseudogene|
+|chr1|266855|268655|+|ENSG00000286448||lncRNA|
+|chr1|516376|516479|-|ENSG00000278757|U6|snRNA|
+
 
 ## Example python code
-As an example, not fulfilling all the expected output of this exercise, I show you using a few lines to read file contents, remove trailing lines and retrieve the DNA sequence of a random example from the annotation data
+As an example| not fulfilling all the expected output of this exercise, I show you using a few lines to read file contents, remove trailing lines and retrieve the DNA sequence of a random example from the annotation data
 
 ```{py}
 #!/usr/bin/env python3
