@@ -1,6 +1,30 @@
 # Final integrative exercise
 
-## Subset data
+This is the final exercise to integrate some concepts and ideas learned during the course.
+
+The idea of this exercise is given an annotation dataframe (see example below) and a fasta file, perform the following steps:
+1. Read files appropriately
+2. Select a random number of entries from the annotation data,
+3. Print the information into a csv file
+4. A boxplot of the selected entries should be created using `biotype` and `length` as `X` and `Y` axis respectively.
+5. Subset DNA sequence entries from the original fasta sequence using start, stop and strand information.
+6. Subsetted sequences should be printed into a file as fasta sequences. You should use `ensembl_id` or `gene_name` in the sequence header.
+7. Use at least 1 user defined function.
+8. Execute the code as a python script
+9. Provide files as system arguments in the python call.
+10. Provide different names for each call and produce several calls.
+
+To do this, you should plan in advance all the necessary steps of the workflow, from the input files to the final output results. Create a workflow using some keypoints or milestones. 
+
+Points are sorted in order of increasing difficulty. Get as far as you can and feel confident.
+
+In the following lines I show how I subsetted the data, and example of the annotation dataframe and a small example of code.
+
+## Obtain the data:
+
+I created the dataset by subsetting some entries from _Homo sapiens_ chromosome 1 annotation and DNA sequence.
+
+### Subset data
 Create a subset some entries from chr1: 215 entries from 0 - 46 Mb
 
 Using linux and the GRCh38 and Ensembl annotation v108, I subsetted some entries and generated a csv file.
@@ -12,7 +36,7 @@ head -10000 Homo_sapiens.GRCh38.108.chr.gtf \
 		sed 's/"//g' | sed 's/;//g' | sed 's/havana//' | sed 's/_tagene//' > chr1_annot.csv 
 ```
 
-## Sort 
+### Sort 
 I sort the contents of the file in a numeric way using starting position for each entry.
 
 ```
@@ -20,7 +44,7 @@ I sort the contents of the file in a numeric way using starting position for eac
 sort -n -k2 -t, > chr1_annot.csv
 ```
 
-## Add header
+### Add header
 Then, I manually add a header to the csv file: `chr,start,stop,strand,ensembl_ID,gene_name,biotype`
 
 As an example:
@@ -35,8 +59,7 @@ chr1,516376,516479,-,ENSG00000278757,U6,snRNA
 ```
 
 ## Example python code
-
-Then, using these few lines, I can read file contents, remove trailing lines and retrieve the DNA sequence of a random example from the annotation data
+As an example, not fulfilling all the expected output of this exercise, I show you using a few lines to read file contents, remove trailing lines and retrieve the DNA sequence of a random example from the annotation data
 
 ```{py}
 #!/usr/bin/env python3
